@@ -1,0 +1,16 @@
+section{
+    position: relative;
+    width : 100%;
+    /* border:42px solid black; */
+    height: 100vh;
+}
+/* section::before{
+    content: '';
+    position: absolute; 
+    top:0;
+    left:0;
+    width : 100%;
+    height : 150px;
+    background: linear-gradient(to top,transparent,#1E3604);
+    z-index: 10;
+} */
