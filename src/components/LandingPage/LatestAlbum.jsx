@@ -6,7 +6,7 @@ const LatestAlbum = () => {
   return (
     <>
       <section className="bg-[#1E3604]  ">
-        <div className="max-w-[1140px] mx-auto py-10 ">
+        <div className="max-w-[1140px] mx-auto pt-10 ">
           {/* Text  */}
           <div className="">
             <h3 className="text-4xl font-semibold text-center text-white">

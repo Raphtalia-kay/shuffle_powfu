@@ -1,17 +1,17 @@
 import React from 'react'
 
-const LatestSingle = () => {
+const LatestNews = () => {
   return (
     <>
-       <section className="bg-[#254205]  ">
+      <section className="bg-[#1E3604]  ">
         <div className="max-w-[1140px] mx-auto pt-10 ">
           {/* Text  */}
           <div className="">
             <h3 className="text-4xl font-semibold text-center text-white">
-              Latest Album
+              Latest News
             </h3>
             <p className="text-xl  text-center text-white pt-[8px]">
-             Hip hop music, Lo-fi, Alternative/Indie, Hip-Hop/Rap
+            Canadian lo-fi rapper Isaiah Faber
             </p>
           </div>
           </div>
@@ -20,4 +20,4 @@ const LatestSingle = () => {
   )
 }
 
-export default LatestSingle
+export default LatestNews
