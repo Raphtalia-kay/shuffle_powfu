@@ -1,7 +1,7 @@
 import React from "react";
 import HeroPowfu from "../assets/powfu-interview-ep-tell-me-your-feelings-and-i-wont-tell-you-mine-scaled.jpg";
 import album from "../assets/e286dc53-c76e-476f-a277-5d9baa78bc64.sized-1000x1000.avif";
-import "../App.css"
+import "../components/Hero.css"
 
 import Navbar from "./NavAndFoot/Navbar";
 import ImageSection from "./LandingPage/ImageSection";
@@ -15,14 +15,14 @@ const Hero = () => {
        <div className="bg-black bg-opacity-50">
        <Navbar/>
      <div className="HeroText max-w-[1140px] mx-auto   flex flex-col pt-32 pb-10  items-center h-[90%]">
-      <h1 className="text-7xl font-bold text-white text-center">
+      <h1 className="text-7xl font-bold text-white text-center select-none">
       Powfu Concert  : 2023 <br /> Live Tour
       </h1>
      <div className="px-72 ">
-     <p className="text-white text-base ">After several years of studying and contributing to the lo-fi hip-hop scene on YouTube, emotive songwriter and artist Powfu has emerged from a small town outside of Vancouver and has established himself as an important player in bringing the unique lo-fi genre into the mainstream around the world</p>
+     <p className="text-[#F5F5F5] text-base text-center select-none ">After several years of studying and contributing to the lo-fi hip-hop scene on YouTube, emotive songwriter and artist Powfu has emerged from a small town outside of Vancouver and has established himself as an important player in bringing the unique lo-fi genre into the mainstream around the world</p>
      <div className="flex justify-center pt-10">
-     <button className="  border-2 bg-white text-black px-10 py-3 
-      rounded-2xl ">Listen</button>
+     <button className="   bg-white text-black px-10 py-3 
+      rounded-2xl active:opacity-50 hover:scale-105 duration-500 ease-in-out hover:bg-[#1E3604] hover:text-white select-none cursor-pointer">Listen</button>
      </div>
      </div>
 

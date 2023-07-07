@@ -5,6 +5,7 @@ import LatestSingle from '../components/LandingPage/LatestSingle'
 import LatestNews from '../components/LandingPage/LatestNews'
 import Footer from '../components/NavAndFoot/Footer'
 import UpperFooter from '../components/NavAndFoot/UpperFooter'
+import GallerySlide from '../components/LandingPage/GallerySlide'
 
 
 const Home = () => {
@@ -14,6 +15,7 @@ const Home = () => {
       <LatestAlbum/>
       <LatestSingle/>
       <LatestNews/>
+      <GallerySlide/>
       <UpperFooter/>
       <Footer/>
     </>
