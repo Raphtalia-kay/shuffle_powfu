@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Poppins:wght@100;300;500;600&display=swap");
+@import url("https://rawgit.com/vn38minhtran/react-photoswipe/next/dist/photoswipe.css");
 
 * {
   font-family: "Poppins", sans-serif;
   font-size: 15px;
 }
-
 
 .mainContainer {
   max-width: 1140px;

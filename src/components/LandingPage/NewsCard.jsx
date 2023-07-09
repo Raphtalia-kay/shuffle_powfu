@@ -50,6 +50,7 @@ const useStyles = createStyles((theme) => ({
   title: {
     fontFamily: `Greycliff CF, ${theme.fontFamily}`,
     fontWeight: 600,
+    fontSize: "lg",
   },
 }));
 
@@ -66,9 +67,9 @@ export function ArticlesCardsGrid() {
       className={classes.card}
     >
       <AspectRatio ratio={4/3}>
-        <Image src={article.image} />
+        <Image src={article.image} height={300} />
       </AspectRatio>
-      <Text color="dimmed" size="xs" transform="uppercase" weight={700} mt="md">
+      <Text color="dimmed" size="xs" transform="uppercase" weight={700} mt="xl">
         {article.date}
       </Text>
       <Text className={classes.title} mt={5}>

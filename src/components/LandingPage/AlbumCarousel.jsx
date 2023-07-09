@@ -65,22 +65,29 @@ const AlbumCarousel = () => {
   return (
     <>
        <Carousel
-      height={600}
+      height={500}
+      className=' pt-14'
+      
       controlSize={39}
       slideSize="33.333333%"
       slideGap="lg"
       loop
-      align="start"
+      align="center"
       slidesToScroll={1}
+    classNames={ {control : "animate-ping"}}
     >
       {albumData?.map((data, index) =>{
         return (
           <Carousel.Slide >
        <div className="flex flex-col  items-center">
-       <div key={index} className="  select-none  w-96 ">
+       <div key={index} className=" group cursor-pointer shadow-2xl select-none  w-96 ">
           <img src={data?.img_url} className='w-full h-full' alt="" />
+<div className="w-96 h-4/5 duration-700 ease-in-out bg-black bg-opacity-70 translate-y-0 absolute top-[50%] group-hover:-translate-y-[65.5%] hidden group-hover:block ">
 
+<h1 className='text-white text-xl  text-center'>{data?.name}</h1>
+</div>
         </div>
+        {/* soundcloud and spotify  */}
         <div className=" select-none pt-5 pl-2 ">
             <div className="flex items-center">
              <a href="https://soundcloud.com/powfu/sets/verses-that-never-surfaced">

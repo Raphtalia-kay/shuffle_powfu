@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import PhotoSwipeLightbox from "photoswipe/lightbox";
-import "photoswipe/style.css";
+import "photoswipe/dist/photoswipe.css";
 
 const GallerySlide = () => {
   const galleryPhoto = [
@@ -73,47 +73,36 @@ const GallerySlide = () => {
         </div>
         {/* small grid photo  */}
         <div className="flex flex-wrap  h-screen ">
-        
           <div className="w-[50%] h-[50%] ">
-          {photoGalleryNew?.map((image, index) => (
-             
-            
+            {photoGalleryNew?.map((image, index) => (
               <a
-               href={image?.url}
-               // data-pswp-width={image?.width}
-               // data-pswp-height={image?.height}
-               key={index}
-               target="_blank"
-               rel="noreferrer"
-             >
-               <img src={image?.url} className="w-full h-full" alt="" />
-             </a> 
-           
-         ))}
+                href={image?.url}
+                // data-pswp-width={image?.width}
+                // data-pswp-height={image?.height}
+                key={index}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img src={image?.url} className="w-full h-full" alt="" />
+              </a>
+            ))}
           </div>
-          
 
           <div className="w-[50%] h-[50%] ">
-          {photoGalleryNew2?.map((image, index) => (
-             
-            
+            {photoGalleryNew2?.map((image, index) => (
               <a
-               href={image?.url}
-               // data-pswp-width={image?.width}
-               // data-pswp-height={image?.height}
-               key={index}
-               target="_blank"
-               rel="noreferrer"
-             >
-               <img src={image?.url} className="w-full h-full" alt="" />
-             </a> 
-           
-         ))}
+                href={image?.url}
+                data-pswp-width={image?.width}
+                data-pswp-height={image?.height}
+                key={index}
+                rel="noreferrer"
+              >
+                <img src={image?.url} className="w-full h-full" alt="" />
+              </a>
+            ))}
           </div>
         </div>
-      
       </div>
-  
     </>
   );
 };

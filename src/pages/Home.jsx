@@ -6,6 +6,7 @@ import LatestNews from '../components/LandingPage/LatestNews'
 import Footer from '../components/NavAndFoot/Footer'
 import UpperFooter from '../components/NavAndFoot/UpperFooter'
 import GallerySlide from '../components/LandingPage/GallerySlide'
+import TourSection from '../components/LandingPage/TourSection'
 
 
 const Home = () => {
@@ -16,6 +17,7 @@ const Home = () => {
       <LatestSingle/>
       <LatestNews/>
       <GallerySlide/>
+      <TourSection/>
       <UpperFooter/>
       <Footer/>
     </>

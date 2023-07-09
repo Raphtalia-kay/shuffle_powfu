@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        opensans : ["'Open Sans', sans-serif"]
+        opensans: ["'Open Sans', sans-serif"],
       },
       colors: {
         bgSoft: "#222222",
@@ -13,6 +13,15 @@ module.exports = {
         primary: "FFFFFFF",
         secondary: "#ADADAD",
         starColor: "#E4A853",
+      },
+      animation: {
+        "spin-slow": "spin 10s linear infinite",
+      },
+      keyframes: {
+        spin: {
+          "0%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(360deg)" },
+        },
       },
     },
   },
