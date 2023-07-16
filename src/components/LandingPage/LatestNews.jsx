@@ -4,10 +4,10 @@ import { ArticlesCardsGrid } from './NewsCard'
 const LatestNews = () => {
   return (
     <>
-      <section className="bg-[#1E3604]  ">
-        <div className="max-w-[1140px] mx-auto pt-12 ">
+      <div className="bg-[#1E3604] pb-32 ">
+        <div className="max-w-[1140px]  mx-auto  ">
           {/* Text  */}
-          <div className="pb-12">
+          <div className="pb-8">
             <h3 className="text-4xl font-semibold text-center text-white">
               Latest News
             </h3>
@@ -15,11 +15,11 @@ const LatestNews = () => {
             Canadian lo-fi rapper Isaiah Faber
             </p>
           </div>
-         <div className="pt-12">
+         <div className="pt-8">
          <ArticlesCardsGrid/>
          </div>
           </div>
-          </section>
+          </div>
     </>
   )
 }

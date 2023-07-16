@@ -3,6 +3,7 @@ import React from 'react'
 import soundCloud from "../../assets/podcast_badge-soundcloud.png";
 import spotify from "../../assets/5ece500f123d6d0004ce5f8a.png";
 
+
 const AlbumCarousel = () => {
   const albumData = [
     {
@@ -26,45 +27,45 @@ const AlbumCarousel = () => {
       name : "Tinted green",
       year : 2021
     },
-    {
-      id : 4,
-      img_url : "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/1f/67/7a/1f677aed-86a2-86e0-d89f-9a92bf26b5c9/886449289080.jpg/1200x1200bb.jpg",
-      singer : "Powfu",
-      name : "Drinking under the streetlight",
-      year : 2021
-    },
-    {
-      id : 5,
-      img_url : "https://e.snmc.io/i/600/s/95046af6011857f98a6856a607fe1b94/8587217/powfu-some-boring-love-stories-pt-5-Cover-Art.jpg",
-      singer : "Powfu",
-      name : "some boring love stories, pt-5",
-      year : 2020
-    },
-    {
-      id : 6,
-      img_url : "https://i.discogs.com/1JSzcFyiAv2ADIN2w8B9_I7isk5P60gsPYrgC318OX8/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE4ODE3/NjM2LTE2MjE1OTEx/NTctMzg4MC5qcGVn.jpeg",
-      singer : "Powfu",
-      name : "Poems of the past",
-      year : 2020
-    },
-    {
-      id : 7,
-      img_url : "https://i.scdn.co/image/ab67616d0000b27352520f019e1a3ff99e2ff90a",
-      singer : "Powfu",
-      name : "Some Boring, Love Stories , pt-3",
-      year : 2019
-    },
-    {
-      id : 8,
-      img_url : "https://cdns-images.dzcdn.net/images/cover/e2eb91a669946f6af0b046a57cd7d285/500x500.jpg",
-      singer : "Powfu",
-      name : "Some boring Love Stories",
-      year : 2018
-    },
+    // {
+    //   id : 4,
+    //   img_url : "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/1f/67/7a/1f677aed-86a2-86e0-d89f-9a92bf26b5c9/886449289080.jpg/1200x1200bb.jpg",
+    //   singer : "Powfu",
+    //   name : "Drinking under the streetlight",
+    //   year : 2021
+    // },
+    // {
+    //   id : 5,
+    //   img_url : "https://e.snmc.io/i/600/s/95046af6011857f98a6856a607fe1b94/8587217/powfu-some-boring-love-stories-pt-5-Cover-Art.jpg",
+    //   singer : "Powfu",
+    //   name : "some boring love stories, pt-5",
+    //   year : 2020
+    // },
+    // {
+    //   id : 6,
+    //   img_url : "https://i.discogs.com/1JSzcFyiAv2ADIN2w8B9_I7isk5P60gsPYrgC318OX8/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE4ODE3/NjM2LTE2MjE1OTEx/NTctMzg4MC5qcGVn.jpeg",
+    //   singer : "Powfu",
+    //   name : "Poems of the past",
+    //   year : 2020
+    // },
+    // {
+    //   id : 7,
+    //   img_url : "https://i.scdn.co/image/ab67616d0000b27352520f019e1a3ff99e2ff90a",
+    //   singer : "Powfu",
+    //   name : "Some Boring, Love Stories , pt-3",
+    //   year : 2019
+    // },
+    // {
+    //   id : 8,
+    //   img_url : "https://cdns-images.dzcdn.net/images/cover/e2eb91a669946f6af0b046a57cd7d285/500x500.jpg",
+    //   singer : "Powfu",
+    //   name : "Some boring Love Stories",
+    //   year : 2018
+    // },
   ]
   return (
     <>
-       <Carousel
+       {/* <Carousel
       height={500}
       className=' pt-14'
       
@@ -74,17 +75,20 @@ const AlbumCarousel = () => {
       loop
       align="center"
       slidesToScroll={1}
-    classNames={ {control : "animate-ping"}}
-    >
+    classNames={ {control : " text-white hover:scale-110 w-5 ", controls : "", indicators : "bg-red-500",indicator:"text-black" }}
+    > */}
       {albumData?.map((data, index) =>{
         return (
-          <Carousel.Slide >
+          // <Carousel.Slide >
        <div className="flex flex-col  items-center">
-       <div key={index} className=" group cursor-pointer shadow-2xl select-none  w-96 ">
+       <div key={index} className=" group rounded-2xl overflow-hidden  cursor-pointer shadow-2xl select-none  w-96 ">
           <img src={data?.img_url} className='w-full h-full' alt="" />
-<div className="w-96 h-4/5 duration-700 ease-in-out bg-black bg-opacity-70 translate-y-0 absolute top-[50%] group-hover:-translate-y-[65.5%] hidden group-hover:block ">
-
+<div className="w-96 h-96 duration-1000 rounded-2xl ease-in-out bg-black bg-opacity-70 translate-y-0 absolute top-[50%] group-hover:-translate-y-[60%] hidden group-hover:block ">
+<div className="flex flex-col h-full justify-center items-center mx-auto">
+  
+<h1 className='text-white text-xl  text-center'>{data?.singer}</h1>
 <h1 className='text-white text-xl  text-center'>{data?.name}</h1>
+</div>
 </div>
         </div>
         {/* soundcloud and spotify  */}
@@ -102,11 +106,11 @@ const AlbumCarousel = () => {
             </div>
           </div>
        </div>
-      </Carousel.Slide>
+      // </Carousel.Slide>
         )
       })}
       
-    </Carousel>
+    {/* </Carousel> */}
     </>
   )
 }

@@ -17,27 +17,26 @@ const Navbar = () => {
     };
   }, []);
   const positionSticky = () => {
-    console.log(scrollPosition);
-    return scrollPosition > 40 ? " bg-[#1b3204]   fixed top-0 w-full  z-50  py-3 " : "  z-50 bg-white bg-opacity-20  py-5 ";
+    // console.log(scrollPosition);
+    return scrollPosition > 40
+      ? " bg-[#142303]   fixed top-0 w-full  z-50  py-3 "
+      : "  z-50 bg-white bg-opacity-20  py-5 ";
   };
   const backgroundChange = () => {
     // console.log("iyjj")
-    return scrollPosition > 40
-      ? ""
-      : "";
+    return scrollPosition > 40 ? "" : "";
   };
   return (
     <>
-    
-        <nav
-          className={
-            ` transition-all ease-in-out duration-500 shadow-sm ` +
-            positionSticky()
-          }
-        >
-            <div className="max-w-[1140px] flex items-center justify-between mx-auto ">
- {/* logo section  */}
- <Link to="/">
+      <nav
+        className={
+          ` transition-all ease-in-out duration-500 shadow-sm ` +
+          positionSticky()
+        }
+      >
+        <div className="max-w-[1140px] flex items-center justify-between mx-auto ">
+          {/* logo section  */}
+          <Link to="/">
             <div className="w-32 active:opacity-60 duration-200 ">
               <img src={logoLight} className="w-full" alt="" />
             </div>
@@ -59,10 +58,8 @@ const Navbar = () => {
               <NavLink to="/gallery">Gallery</NavLink>
             </li>
           </ul>
-            </div>
-         
-        </nav>
-      
+        </div>
+      </nav>
     </>
   );
 };

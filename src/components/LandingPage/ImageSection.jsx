@@ -7,10 +7,11 @@ const ImageSection = () => {
   return (
     <>
       {/* img section  */}
-      <div className="max-w-[1140px] mx-auto pt-32  pb-20">
-        <div className="relative">
-          <img src={album} alt="" />
-          <div className="absolute bottom-40 left-20">
+      <div className="max-w-[1140px] mx-auto pt-24  pb-20">
+        <div className="relative ">
+          <img src={album}  alt="" />
+          <div className="bg-black bg-opacity-20 absolute top-0 left-0 w-full h-full "></div>
+          <div className="absolute bottom-40 z-50 left-20">
             <h1 className="text-6xl text-white font-semibold select-none">
               New Album <br />
               Now Available

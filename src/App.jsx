@@ -4,6 +4,11 @@ import Hero from "./components/Hero";
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import AnimatedCursor from "react-animated-cursor";
+import Discography from "./pages/Discography";
+import Tours from "./pages/Tours";
+import Blog from "./pages/Blog";
+import Gallery from "./pages/Gallery";
+
 
 const App = () => {
   return (
@@ -11,22 +16,25 @@ const App = () => {
       <div className="cursor__dot">
         <AnimatedCursor
           innerSize={10}
-          outerSize={25}
-          color="83, 154, 12"
+          outerSize={15}
+          color="82,128,31"
           outerAlpha={0.1} // opacity of outer cursor while hover
           innerScale={0} // size of inner cursor while hover
           outerScale={10} // size of outer cursor while hover
           trailingSpeed={1} // following dot speed
           outerStyle={{
-            background: "rgb(83, 154, 12);",
             background:
-              "radial-gradient(circle, rgba(83, 154, 12,1) 0%, rgba(255,255,255,0.2) 100%)",
-            filter: "blur(15px)",
+              "radial-gradient(circle, rgba(82,128,31,1) 0%, rgba(255,255,255,0.2) 100%)",
+            filter: "blur(75px)",
           }}
         />
       </div>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/discography" element={<Discography />} />
+        <Route path="/tours" element={<Tours />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/gallery" element={<Gallery />} />
       </Routes>
     </>
   );

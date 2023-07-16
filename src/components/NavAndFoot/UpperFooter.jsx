@@ -1,4 +1,4 @@
-import { Button, Flex, Grid, Input } from "@mantine/core";
+import { Button, Flex, Grid, Input, Tooltip } from "@mantine/core";
 import {
   IconAt,
   IconBrandFacebook,
@@ -82,10 +82,23 @@ const UpperFooter = () => {
                 <p className="text-base">2018-present </p>
                 <p className="text-base">ColumbiaRobots + Humans</p>
                 <Flex className="gap-5 pt-5">
-                  <IconBrandInstagram size={20} />
-                  <IconBrandFacebook size={20} />
-                  <IconBrandTwitter size={20} />
-                  <IconBrandSoundcloud size={20} />
+                <Tooltip label="instagram" >
+
+                 <IconBrandInstagram size={20} className="hover:scale-110" />
+                 </Tooltip>
+                <Tooltip label="facebook" >
+
+                  <IconBrandFacebook size={20} className="hover:scale-110" />
+                 </Tooltip>
+                <Tooltip label="twitter" >
+
+                  <IconBrandTwitter size={20}  className="hover:scale-110"/>
+                 </Tooltip>
+                <Tooltip label="soundcloud" >
+
+                  <IconBrandSoundcloud size={20} className="hover:scale-110" />
+                 </Tooltip>
+                
                 </Flex>
               </div>
             </Grid.Col>
@@ -95,16 +108,18 @@ const UpperFooter = () => {
                   Ticket alert - Never miss an event!
                 </h4>
               </div>
-              <div className="relative">
+              <div className="relative overflow-hidden rounded-md">
                 <Input
-                  placeholder="Your email Adderss"
+                variant="unstyled"
+                  placeholder="    Your email Address"
                   className=" "
                   classNames={{
-                    input: "bg-transparent",
+                    input: "bg-[#E6E6E6]",
+                
                     
                   }}
                 />
-               <button className="bg-[#1E3604] text-white px-5 py-1 absolute right-1 top-1 ">
+               <button className="bg-[#1E3604] text-white px-5 py-2 absolute right-0  top-0 hover:bg-[#1E3604]  ">
                 <IconSend size={20}/>
                </button>
               </div>

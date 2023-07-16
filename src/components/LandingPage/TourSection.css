@@ -1,0 +1,18 @@
+.tourbg{
+    background-image: url("../../assets/powfu-press-2021-cr-Brandon-Artis-billboard-1548-1633642521.webp");
+    background-position: center;
+    background-size: cover;
+    /* position: relative; */
+  }
+  
+  /* .homeBg::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, #1e3802, transparent);
+    z-index: 10;
+  } */
+  

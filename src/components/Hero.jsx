@@ -10,11 +10,10 @@ const Hero = () => {
   return (
     <>
       <div className="homeBg  ">
-        {/* <img className="absolute left-0 top-0 -z-10" src={HeroPowfu} alt="" /> */}
-        {/* Navbar  */}
+      
        <div className="bg-black bg-opacity-50">
        <Navbar/>
-     <div className="HeroText max-w-[1140px] mx-auto   flex flex-col pt-32 pb-10  items-center h-[90%]">
+     <div className="HeroText max-w-[1140px] mx-auto min-h-screen  flex flex-col pt-32 pb-10  items-center h-[90%]">
       <h1 className="text-7xl font-bold text-white text-center select-none">
       Powfu Concert  : 2023 <br /> Live Tour
       </h1>

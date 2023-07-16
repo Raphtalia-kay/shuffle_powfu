@@ -38,12 +38,14 @@ const mockdata = [
 
 const useStyles = createStyles((theme) => ({
   card: {
-    transition: "transform 150ms ease, box-shadow 150ms ease",
-    backgroundColor : "",
+    transition: "transform 150ms ease, box-shadow  150ms ease",
+    backgroundColor : "white",
+    // border : "1px solid black",
+   
 
     "&:hover": {
       transform: "scale(1.01)",
-      boxShadow: theme.shadows.md,
+      boxShadow: theme.shadows.lg,
     },
   },
 
@@ -51,6 +53,7 @@ const useStyles = createStyles((theme) => ({
     fontFamily: `Greycliff CF, ${theme.fontFamily}`,
     fontWeight: 600,
     fontSize: "lg",
+    color : "black",
   },
 }));
 
@@ -61,7 +64,7 @@ export function ArticlesCardsGrid() {
     <Card
       key={article.title}
       p="md"
-      radius="sm"
+      radius="lg"
       component="a"
       href="#"
       className={classes.card}

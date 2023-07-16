@@ -5,8 +5,8 @@ const LatestSingle = () => {
  
   return (
     <>
-       <section className="bg-[#1E3604]  ">
-        <div className="max-w-[1140px] mx-auto pt-10 ">
+       <div className="bg-[#1E3604]  ">
+        <div className="max-w-[1140px] min-h-screen mx-auto pt-8 ">
           {/* Text  */}
           <div className="pb-12   select-none">
             <h3 className="text-4xl font-semibold text-center text-white">
@@ -16,9 +16,11 @@ const LatestSingle = () => {
              Hip hop music, Lo-fi, Alternative/Indie, Hip-Hop/Rap
             </p>
           </div>
-          <AlbumCarousel  />
+        <div className="flex justify-center items-center mx-auto gap-4">
+        <AlbumCarousel  />
+        </div>
           </div>
-          </section>
+          </div>
     </>
   )
 }
