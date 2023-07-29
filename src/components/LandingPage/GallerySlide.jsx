@@ -29,10 +29,61 @@ const GallerySlide = () => {
   useEffect(() => {}, []);
   return (
     <>
-      <div className=" flex ">
+    {/* for mobile */}
+     <div className=" flex md:hidden ">
         <Gallery>
           {/* Large Photo */}
-          <div className="w-[52%]  object-fill h-screen ">
+          <div className="w-[50%] h-[200px] object-fill  ">
+            <Item
+              original={galleryPhoto[0]?.url}
+              thumbnail={galleryPhoto[0]?.url}
+              // width="108"
+              // height="108"
+            >
+              {({ ref, open }) => (
+                <img
+                  ref={ref}
+                  onClick={open}
+                  src={galleryPhoto[0]?.url}
+                  className="w-full h-full"
+                />
+              )}
+            </Item>
+          </div>
+          <div className="w-[50%] h-[50%] flex flex-wrap">
+            {galleryPhoto?.map((photo, index) => {
+              if (index != 0) {
+                return (
+                  <Item
+                    key={index}
+                    original={photo?.url}
+                    thumbnail={photo?.url}
+                    // width="108"
+                    // height="108"
+                  >
+                    {({ ref, open }) => (
+                      <img
+                        ref={ref}
+                        onClick={open}
+                        src={photo?.url}
+                        className="relative"
+                        style={{
+                          width: "50%",
+                          height: 100,
+                        }}
+                      />
+                    )}
+                  </Item>
+                );
+              }
+            })}
+          </div>
+        </Gallery>
+      </div>
+      <div className=" xl:flex hidden ">
+        <Gallery>
+          {/* Large Photo */}
+          <div className="w-[52%] object-fill  ">
             <Item
               original={galleryPhoto[0]?.url}
               thumbnail={galleryPhoto[0]?.url}
@@ -68,7 +119,7 @@ const GallerySlide = () => {
                         className="relative"
                         style={{
                           width: "50%",
-                          height: 369.5,
+                          height: 453,
                         }}
                       />
                     )}

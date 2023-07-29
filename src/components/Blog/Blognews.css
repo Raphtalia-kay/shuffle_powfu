@@ -1,0 +1,30 @@
+.underlinecustom::after{
+    content: " ";
+    width: 100px;
+    height: 5px;
+    background-color : rgba(82,128,31);
+    position: absolute;
+    top : 35px;
+    left : 0;
+}
+ul{
+    list-style-type: ">"; 
+    color : rgb(124, 122, 122);
+    
+}
+ul li::before{
+    content: "";
+    
+    margin-right : 1rem;
+}
+/* .sidebarSticky{
+    height:  1000px;
+    overflow-y: scroll;
+    
+    position : -webkit-sticky;
+    position : sticky;
+    top:12px;
+}
+.sidebarSticky::-webkit-scrollbar {
+    display: none;
+} */

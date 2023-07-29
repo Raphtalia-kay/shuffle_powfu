@@ -7,8 +7,8 @@ import AnimatedCursor from "react-animated-cursor";
 import Discography from "./pages/Discography";
 import Tours from "./pages/Tours";
 import Blog from "./pages/Blog";
-import Gallery from "./pages/Gallery";
 
+import About from "./pages/About";
 
 const App = () => {
   return (
@@ -34,7 +34,7 @@ const App = () => {
         <Route path="/discography" element={<Discography />} />
         <Route path="/tours" element={<Tours />} />
         <Route path="/blog" element={<Blog />} />
-        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/about" element={<About />} />
       </Routes>
     </>
   );

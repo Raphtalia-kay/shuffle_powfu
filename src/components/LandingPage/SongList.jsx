@@ -102,7 +102,7 @@ const SongList = () => {
   const rows = songs.map((song) => (
     <tr key={song.id} className="">
       <td className="text-white   cursor-pointer select-none">{song.id}.</td>
-      <td className="text-white   cursor-pointer select-none">{song.name}</td>
+      <td className="text-white    cursor-pointer select-none">{song.name}</td>
       <td className="text-white   cursor-pointer select-none">
         {song.duration}
       </td>

@@ -83,7 +83,11 @@ export function ArticlesCardsGrid() {
 
   return (
     <Container className=" m-0 pl-0 pr-0 max-w-[100%] pt-0 pb-0" py="xl">
-      <SimpleGrid cols={3} breakpoints={[{ maxWidth: "", cols: 1 }]}>
+      <SimpleGrid cols={3}   breakpoints={[
+        { maxWidth: '62rem', cols: 3, spacing: 'md' },
+        { maxWidth: '48rem', cols: 2, spacing: 'sm' },
+        { maxWidth: '36rem', cols: 1, spacing: 'sm' },
+      ]}>
         {cards}
       </SimpleGrid>
     </Container>

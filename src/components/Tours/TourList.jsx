@@ -76,21 +76,21 @@ const TourList = () => {
       ];
       const rows = tourData.map((tour) => (
         <tr key={tour.id} className="group">
-          <td className="text-white group-hover:text-black  cursor-pointer select-none transition-colors duration-500">
+          <td className="text-white text-xs group-hover:text-black  cursor-pointer select-none transition-colors duration-500">
             {tour.date}
           </td>
-          <td className="text-white group-hover:text-black  cursor-pointer select-none transition-colors duration-500">
+          <td className="text-white text-xs group-hover:text-black  cursor-pointer select-none transition-colors duration-500">
             {tour.club}
           </td>
-          <td className="text-white group-hover:text-black  cursor-pointer select-none transition-colors duration-500">
+          <td className="text-white text-xs group-hover:text-black  cursor-pointer select-none transition-colors duration-500">
             {tour.location}
           </td>
-          <td className="text-white group-hover:text-black  cursor-pointer select-none transition-colors duration-500">
+          <td className="text-white text-xs group-hover:text-black  cursor-pointer select-none transition-colors duration-500">
             <button
               className={
                 tour.status === "Sold Out"
-                  ? "text-red-500  px-2 py-2 rounded-lg  group-hover:text-black border-[1px] border-black w-36  "
-                  : "text-white  px-2 py-2 rounded-lg  group-hover:text-black border-[1px] border-black w-36  "
+                  ? "text-red-500 w-20 py-2 rounded-md md:py-2  md:rounded-lg  group-hover:text-black border-[1px] border-black md:w-36   "
+                  : "text-white w-20 py-2 rounded-md md:py-2  md:rounded-lg  group-hover:text-black border-[1px] border-black md:w-36  "
               }
             >
               {tour.status}
@@ -101,37 +101,37 @@ const TourList = () => {
   return (
     <>
     
-        <div className="bg-[#1E3604] py-10  backdrop-blur-sm ">
-          <div className="max-w-[1140px] mx-auto min-h-screen  pt-10 ">
+        <div className="bg-[#1E3604]  backdrop-blur-sm ">
+          <div className="max-w-xs  md:max-w-[700px] lg:max-w-[950px] xl:max-w-[1140px] mx-auto min-h-screen flex flex-col justify-center items-center  pt-10 ">
             {/* Text  */}
-            <div className="pb-2">
-              <h3 className="text-4xl font-semibold text-center text-white">
+            <div className="md:pb-2">
+              <h3 className="text-xl md:text-4xl font-semibold text-center text-white">
                 Powfu tour dates 2023
               </h3>
-              <p className="text-xl  text-center text-white pt-[8px]">
+              <p className="text-md md:text-xl  text-center text-white pt-[8px]">
                 Powfu is currently touring across 7 countries and has 10
                 upcoming concerts.
               </p>
             </div>
-            <Table verticalSpacing="md" fontSize="md">
+            <Table verticalSpacing="md" >
               <thead>
                 <tr>
                   <th className=" cursor-pointer select-none">
                     {" "}
-                    <h1 className="text-white text-xl font-semibold ">
+                    <h1 className="py-0 text-white text-lg md:text-xl font-semibold ">
                       Date
                     </h1>{" "}
                   </th>
                   <th className="  cursor-pointer select-none">
-                    <h1 className="text-white text-xl font-semibold ">Club</h1>
+                    <h1 className="py-0 text-white text-lg md:text-xl font-semibold ">Club</h1>
                   </th>
                   <th className="  cursor-pointer select-none">
-                    <h1 className="text-white text-xl font-semibold ">
+                    <h1 className="py-0 text-white text-lg md:text-xl font-semibold ">
                       Location
                     </h1>
                   </th>
                   <th className="  cursor-pointer select-none">
-                    <h1 className="text-white text-xl font-semibold ">Order</h1>
+                    <h1 className="py-0 text-white text-lg md:text-xl font-semibold ">Order</h1>
                   </th>
                 </tr>
               </thead>

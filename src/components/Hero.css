@@ -2,6 +2,7 @@
   background-image: url("../assets/powfu-interview-ep-tell-me-your-feelings-and-i-wont-tell-you-mine-scaled.jpg");
   background-position: center;
   background-size: cover;
+  /* background-repeat: no-repeat; */
   position: relative;
 }
 

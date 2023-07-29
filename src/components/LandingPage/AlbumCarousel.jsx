@@ -65,25 +65,14 @@ const AlbumCarousel = () => {
   ]
   return (
     <>
-       {/* <Carousel
-      height={500}
-      className=' pt-14'
-      
-      controlSize={39}
-      slideSize="33.333333%"
-      slideGap="lg"
-      loop
-      align="center"
-      slidesToScroll={1}
-    classNames={ {control : " text-white hover:scale-110 w-5 ", controls : "", indicators : "bg-red-500",indicator:"text-black" }}
-    > */}
+     
       {albumData?.map((data, index) =>{
         return (
-          // <Carousel.Slide >
-       <div className="flex flex-col  items-center">
-       <div key={index} className=" group rounded-2xl overflow-hidden  cursor-pointer shadow-2xl select-none  w-96 ">
+       
+       <div className="flex flex-col   items-center">
+       <div key={index} className=" group rounded-2xl overflow-hidden  cursor-pointer shadow-2xl select-none w-80  xl:w-96 ">
           <img src={data?.img_url} className='w-full h-full' alt="" />
-<div className="w-96 h-96 duration-1000 rounded-2xl ease-in-out bg-black bg-opacity-70 translate-y-0 absolute top-[50%] group-hover:-translate-y-[60%] hidden group-hover:block ">
+<div className="w-80 md:w-96 md:h-96 duration-1000 rounded-2xl ease-in-out bg-black bg-opacity-70 translate-y-0 absolute top-[50%] group-hover:-translate-y-[60%] hidden group-hover:block ">
 <div className="flex flex-col h-full justify-center items-center mx-auto">
   
 <h1 className='text-white text-xl  text-center'>{data?.singer}</h1>
@@ -95,11 +84,11 @@ const AlbumCarousel = () => {
         <div className=" select-none pt-5 pl-2 ">
             <div className="flex items-center">
              <a href="https://soundcloud.com/powfu/sets/verses-that-never-surfaced">
-             <div className="w-44  ">
+             <div className=" w-32 lg:w-36 xl:w-44  ">
                 <img src={soundCloud} className="w-full " alt="" />
               </div>
              </a>
-              <div className="w-44   ">
+              <div className=" w-32 lg:w-36 xl:w-44   ">
                 <a href="https://open.spotify.com/playlist/37i9dQZF1DZ06evO3Ec90s?si=354323a6194d4043">
                 <img src={spotify} className="w-full" alt="" /></a>
               </div>

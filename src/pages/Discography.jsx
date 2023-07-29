@@ -32,18 +32,12 @@ const Discography = () => {
   }
   return (
     <>
-     {/* <DiscographySlide /> */}
+
       <Layout>
       <DiscographySlide />
       <SocialMediacard/>
 
-      {/* <div className="bg-[#1E3604]">
-      <Navbar/>
-        <DiscographySlide />
-        <SocialMediacard/>
-        <UpperFooter/>
-        <Footer/>
-      </div> */}
+
       </Layout>
     </>
   );

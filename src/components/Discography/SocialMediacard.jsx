@@ -1,4 +1,5 @@
 import { Table } from "@mantine/core";
+import { useMediaQuery } from "@mantine/hooks";
 import {
   IconBrandFacebook,
   IconBrandGooglePlay,
@@ -16,9 +17,9 @@ const SocialMediaIcon = ({ bgColor, icon, iconName }) => {
   return (
     <>
       <td className={`py-12 group bg-[${bgColor}]`}>
-        <div className="flex flex-col justify-center text-white  items-center translate-y-0 group-hover:-translate-y-3 transition-all duration-300">
+        <div className="flex flex-col justify-center text-white    items-center translate-y-0 group-hover:-translate-y-3 transition-all duration-300">
           {icon}
-          <span className="opacity-0 group-hover:opacity-30 absolute translate-y-8">
+          <span className="opacity-0 md:text-xl text-[8px] group-hover:opacity-30 absolute translate-y-8">
             {iconName}
           </span>
         </div>
@@ -28,12 +29,13 @@ const SocialMediaIcon = ({ bgColor, icon, iconName }) => {
 };
 
 const SocialMediacard = () => {
+  const largeScreen = useMediaQuery('(min-width: 60em)');
   const socialMediaIcons = [
     {
       icon: (
         <IconBrandTwitterFilled
-          className="text-white text-opacity-10 group-hover:text-white"
-          size={35}
+          className="text-white text-opacity-10 text-xs group-hover:text-white"
+          size={largeScreen ? "45" : "20"}
         />
       ),
       iconName: "Twitter",
@@ -41,8 +43,8 @@ const SocialMediacard = () => {
     {
       icon: (
         <IconBrandInstagram
-          className="text-white text-opacity-10 group-hover:text-white"
-          size={35}
+          className="text-white text-opacity-10 text-xs group-hover:text-white"
+          size={largeScreen ? "45" : "20"}
         />
       ),
       iconName: "Instagram",
@@ -50,8 +52,8 @@ const SocialMediacard = () => {
     {
       icon: (
         <IconBrandSpotify
-          className="text-white text-opacity-10 group-hover:text-white"
-          size={35}
+          className="text-white text-opacity-10 text-xs group-hover:text-white"
+          size={largeScreen ? "45" : "20"}
         />
       ),
       iconName: "Spotify",
@@ -59,8 +61,8 @@ const SocialMediacard = () => {
     {
       icon: (
         <IconBrandSoundcloud
-          className="text-white text-opacity-10 group-hover:text-white"
-          size={35}
+          className="text-white text-opacity-10 text-xs group-hover:text-white"
+          size={largeScreen ? "45" : "20"}
         />
       ),
       iconName: "Twitter",
@@ -68,8 +70,8 @@ const SocialMediacard = () => {
     {
       icon: (
         <IconBrandYoutube
-          className="text-white text-opacity-10 group-hover:text-white"
-          size={35}
+          className="text-white text-opacity-10 text-xs group-hover:text-white"
+          size={largeScreen ? "45" : "20"}
         />
       ),
       iconName: "Youtube",
@@ -77,8 +79,8 @@ const SocialMediacard = () => {
     {
       icon: (
         <IconBrandFacebook
-          className="text-white text-opacity-10 group-hover:text-white"
-          size={35}
+          className="text-white text-opacity-10 text-xs group-hover:text-white"
+          size={largeScreen ? "45" : "20"}
         />
       ),
       iconName: "Facebook",
@@ -86,8 +88,8 @@ const SocialMediacard = () => {
     {
       icon: (
         <IconBrandTidal
-          className="text-white text-opacity-10 group-hover:text-white"
-          size={35}
+          className="text-white text-opacity-10 text-xs group-hover:text-white"
+          size={largeScreen ? "45" : "20"}
         />
       ),
       iconName: "Tidal",
@@ -95,8 +97,8 @@ const SocialMediacard = () => {
     {
       icon: (
         <IconBrandGooglePlay
-          className="text-white text-opacity-10 group-hover:text-white"
-          size={35}
+          className="text-white text-opacity-10 text-xs group-hover:text-white "
+          size={largeScreen ? "45" : "20"}
         />
       ),
       iconName: "Google Play",
@@ -105,8 +107,8 @@ const SocialMediacard = () => {
 
   return (
     <>
-      <div className="    ">
-        <Table verticalSpacing="lg ">
+      <div className="  ">
+        <Table horizontalSpacing={largeScreen ? "lg " : "xs"} verticalSpacing={largeScreen ? "lg " : "xs"}>
           <tbody>
             <tr>
               {socialMediaIcons?.map((item, index) => {
@@ -116,13 +118,14 @@ const SocialMediacard = () => {
                     bgColor={index % 2 == 0 ? "#152602" : "#264104"}
                     icon={item?.icon}
                     iconName={item?.iconName}
+                  
                   />
                 );
               })}
               {/* <td className="py-10  group bg-[#264104]">
                 {" "}
                 <div className="flex flex-col group-hover:scale-110 justify-center  text-white  items-center">
-                  <IconBrandInstagram className="text-white" size={35} />
+                  <IconBrandInstagram className="text-white" size={largeScreen ? "45" : "20"} />
                   Twitter
                 </div>
               </td>

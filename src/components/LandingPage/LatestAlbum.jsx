@@ -6,25 +6,25 @@ import SongList from "./SongList";
 const LatestAlbum = () => {
   return (
     <>
-      <section className="bg-[#1E3604]  ">
-        <div className="max-w-[1140px] mx-auto pt-16 ">
+      <div className="bg-[#1E3604] ">
+        <div className="max-w-xs md:max-w-[700px] lg:max-w-[950px] xl:max-w-[1140px] min-h-screen py-16 mx-auto   ">
           {/* Text  */}
           <div className="pb-8">
-            <h3 className="text-4xl font-semibold text-center text-white">
+            <h3 className=" text-xl md:text-4xl font-semibold text-center text-white">
               Latest Album - "Flooding the Gates"
             </h3>
-            <p className="text-xl  text-center text-white pt-[8px]">
+            <p className=" text-md md:text-xl  text-center text-white pt-[8px]">
               Powfu, Ouse, Snow{" "}
             </p>
           </div>
-          {/*  section  */}
-          <div className="  flex items-center justify-between">
+          {/*  div  */}
+          <div className="  flex flex-col gap-3 md:flex-row items-center justify-between">
             {/* image */}
-            <div className="w-[36%] group relative">
-              <div className="w-full select-none rounded-lg absolute z-10 left-0  overflow-hidden shadow-lg ">
+            <div className=" w-[60%] md:w-[36%] group relative">
+              <div className="w-full select-none rounded-lg absolute z-10 -left-10 md:left-0  overflow-hidden shadow-lg ">
                 <img src={latestalbum} className="w-full " alt="" />
               </div>
-              <div className="w-full translate-x-[35%] ">
+              <div className="w-full translate-x-[25%] md:translate-x-[35%] ">
                 <div className="animate-spin-slow select-none">
                   <img src={Disc} className="w-full" alt="Disc" />
                 </div>
@@ -32,12 +32,12 @@ const LatestAlbum = () => {
             </div>
 
             {/* song  */}
-            <div className="w-[45%] ">
+            <div className="md:w-[45%] max-w-xs md:max-w-[700px] xl:max-w-[1140px]">
               <SongList />
             </div>
           </div>
         </div>
-      </section>
+      </div>
     </>
   );
 };

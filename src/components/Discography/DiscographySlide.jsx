@@ -72,7 +72,7 @@ const DiscographySlide = () => {
   return (
     <>
       <div className="  ">
-        <div className="max-w-[1140px] mx-auto    ">
+        <div className="max-w-xs md:max-w-[700px] lg:max-w-[950px] xl:max-w-[1140px] mx-auto    ">
             {/* Text  */}
             <div className="py-8">
             <h3 className="text-4xl font-medium text-center text-white">
@@ -83,7 +83,7 @@ const DiscographySlide = () => {
             </p>
           </div>
 
-          <div className="flex  py-4  flex-wrap  items-center gap-4">
+          <div className="flex justify-center  py-4  flex-wrap  items-center gap-4">
             {albumData?.map((data, index) => {
               return (
                 <div className="">
@@ -91,15 +91,15 @@ const DiscographySlide = () => {
                     {/* image */}
                     <div
                      key={index}
-                      className=" group  cursor-pointer  shadow-2xl select-none  w-96 relative "
+                      className=" group  cursor-pointer  shadow-2xl select-none w-60 md:w-96 relative "
                     >
                       <img
                         src={data?.img_url}
                         className="w-full h-full"
                         alt=""
                       />
-                      {/* bg-black duration-700 ease-in-out  bg-opacity-70 translate-y-0 absolute top-[50%]   group-hover:-translate-y-[8%] hidden group-hover:block */}
-                      <div className="w-96 h-96  bg-black bg-opacity-70 translate-y-0 absolute top-[50%]   group-hover:-translate-y-[50%] hidden group-hover:block  ">
+                     
+                      <div className="md:w-96 w-60 h-60 md:h-96  bg-black bg-opacity-70 translate-y-0 absolute top-[50%]   group-hover:-translate-y-[50%] hidden group-hover:block  ">
                     <div className="flex flex-col h-full justify-center items-center mx-auto">
                       <h1 className="text-white text-xl  text-center">
                         {data?.singer}
@@ -111,14 +111,14 @@ const DiscographySlide = () => {
                   </div>
                     </div>
                     {/* amazon and googleplay  */}
-                    <div className=" select-none pt-5 pl-2 ">
-                      <div className="flex items-center">
+                    <div className=" select-none pt-5  md:pl-2 ">
+                      <div className="flex justify-center items-center">
                         <a href="https://soundcloud.com/powfu/sets/verses-that-never-surfaced">
-                          <div className="w-44  ">
+                          <div className=" w-28 md:w-44  ">
                             <img src={amazon} className="w-full " alt="" />
                           </div>
                         </a>
-                        <div className="w-48  ">
+                        <div className=" w-32 md:w-48  ">
                           <a href="https://open.spotify.com/playlist/37i9dQZF1DZ06evO3Ec90s?si=354323a6194d4043">
                             <img src={playstore} className="w-full" alt="" />
                           </a>
