@@ -9,8 +9,11 @@ import Tours from "./pages/Tours";
 import Blog from "./pages/Blog";
 
 import About from "./pages/About";
+import UptoTop from "./components/UptoTop";
 
 const App = () => {
+  
+
   return (
     <>
       <div className="cursor__dot">
@@ -29,6 +32,7 @@ const App = () => {
           }}
         />
       </div>
+      <UptoTop/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/discography" element={<Discography />} />

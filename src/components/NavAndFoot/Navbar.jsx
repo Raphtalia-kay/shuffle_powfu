@@ -1,12 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import logoLight from "../../assets/logo-loght-a.png";
-import { useDisclosure } from "@mantine/hooks";
-import { Burger } from "@mantine/core";
+
+import { MdClose, MdOutlineMenu } from "react-icons/md";
 
 const Navbar = () => {
-  const [opened, { toggle }] = useDisclosure(false);
-  const label = opened ? "Close navigation" : "Open navigation";
+  const [opened,setopened] = useState(false);
 
   const loation = useLocation();
   const currentRoute = location?.pathname;
@@ -38,6 +37,11 @@ const Navbar = () => {
   const handleActive = (link) => {
     setactiveState(link);
   };
+ 
+  const ClickHandler = () =>{
+    setopened(!opened);
+  }
+
   return (
     <>
       <nav
@@ -116,12 +120,76 @@ const Navbar = () => {
               </NavLink>
             </li>
           </ul>
-          <Burger
-            className="md:hidden"
-            color="white"
-            opened={opened}
-            onClick={toggle}
-          />
+          <MdOutlineMenu className="text-white text-3xl md:hidden" onClick={() => ClickHandler()} />
+         {opened && <div className="w-56 sm:w-80 md:hidden min-h-screen z-50 bg-black absolute right-0 top-0">
+     <MdClose className="absolute text-2xl text-white right-12 top-5" onClick={() => ClickHandler()} />
+          
+        <ul className="flex flex-col justify-center items-center gap-10 my-auto min-h-screen">
+            <li className=" list-none cursor-pointer select-none text-white md:pl-5  duration-500 ease-in-out hover:scale-125 hover:font-semibold active:opacity-70">
+              <NavLink
+                to="/"
+                className={`${
+                  activeState === "/" ? " underline underline-offset-8" : ""
+                }`}
+                onClick={() => handleActive("/")}
+              >
+                Home
+              </NavLink>
+            </li>
+            <li className=" list-none cursor-pointer select-none text-white md:pl-5  duration-500 ease-in-out hover:scale-125 hover:font-semibold active:opacity-70">
+              <NavLink
+                to="/about"
+                className={`${
+                  activeState === "/about"
+                    ? " underline underline-offset-8"
+                    : ""
+                }`}
+                onClick={() => handleActive("/about")}
+              >
+                About
+              </NavLink>
+            </li>
+            <li className=" list-none cursor-pointer select-none text-white md:pl-5  duration-500 ease-in-out hover:scale-125 hover:font-semibold active:opacity-70">
+              <NavLink
+                to="/discography"
+                className={`${
+                  activeState === "/discography"
+                    ? " underline underline-offset-8"
+                    : ""
+                }`}
+                onClick={() => handleActive("/discography")}
+              >
+                Discography
+              </NavLink>
+            </li>
+            <li className=" list-none cursor-pointer select-none text-white md:pl-5  duration-500 ease-in-out hover:scale-125 hover:font-semibold active:opacity-70">
+              <NavLink
+                to="/tours"
+                className={`${
+                  activeState === "/tours"
+                    ? " underline underline-offset-8"
+                    : ""
+                }`}
+                onClick={() => handleActive("/tours")}
+              >
+                Tours
+              </NavLink>
+            </li>
+            <li className=" list-none cursor-pointer select-none text-white md:pl-5  duration-500 ease-in-out hover:scale-125 hover:font-semibold active:opacity-70">
+              <NavLink
+                to="/blog"
+                className={`${
+                  activeState === "/blog" ? " underline underline-offset-8" : ""
+                }`}
+                onClick={() => handleActive("/blog")}
+              >
+                Blog
+              </NavLink>
+            </li>
+          </ul>
+     
+        </div>}
+        
         </div>
       </nav>
     </>

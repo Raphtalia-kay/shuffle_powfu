@@ -4,11 +4,14 @@ import App from './App'
 import { BrowserRouter } from 'react-router-dom'
 import { MantineProvider } from '@mantine/core'
 
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <>
    <BrowserRouter>
    <MantineProvider>
-   <App />
+
+  <App />
+ 
    </MantineProvider>
    </BrowserRouter>
   </>
